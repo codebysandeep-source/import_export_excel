@@ -4,7 +4,7 @@
 
     <div class="col-12 shadow border rounded p-3">
       <h4><b class="text-danger" style="font-size: 10px;">Angular</b> Import/Export Excel</h4>
-      <input type="file" (change)="onFileChange($event)" class="form-control" >
+      <input type="file" (change)="onFileChange($event)" accept=".xls,.xlsx,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" class="form-control" >
       <div *ngIf="data.length" class="card mt-4 p-2">
       <table class="table">
         <tr *ngFor="let row of data" class="tr-style">
