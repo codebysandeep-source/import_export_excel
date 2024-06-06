@@ -1,0 +1,39 @@
+
+<div class="container">
+  <div class="row mt-3">
+
+    <div class="col-12 shadow border rounded p-3">
+      <h4><b class="text-danger" style="font-size: 10px;">Angular</b> Import/Export Excel</h4>
+      <input type="file" (change)="onFileChange($event)" class="form-control" >
+      <div *ngIf="data.length" class="card mt-4 p-2">
+      <table class="table">
+        <tr *ngFor="let row of data" class="tr-style">
+          <td class="border p-2" *ngFor="let cell of row">{{ cell }}</td>
+        </tr>
+      </table>
+      </div>
+    </div>
+
+    <div *ngIf="data.length" class="col-12 shadow p-4 mt-4">
+      <div class="row">
+        <div class="col-6 border">
+          <button (click)="exportArrayToExcel()" [disabled]="!jsonData.length" class="p-2 mt-3 btn btn-sm btn-success">Export Array to Excel</button>
+          <hr/>
+          <pre>
+            {{data | json}}
+            </pre>
+            </div>
+          <div class="col-6 border">
+          <button (click)="exportJsonToExcel()" [disabled]="!jsonData.length" class="p-2 mt-3 btn btn-sm btn-success">Export Dictionary to Excel</button>
+          <hr/>
+          <pre>
+            {{jsonData | json}}
+          </pre>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+

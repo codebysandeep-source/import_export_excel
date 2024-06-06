@@ -1,0 +1,8 @@
+.tr-style:first-child{
+  background: #ececec;
+  height: 40px;
+  padding-left: 5px;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: #4c4a4a;
+}
